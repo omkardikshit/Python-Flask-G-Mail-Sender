@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    <link href="{{ url_for('static',filename='favicon.ico') }}" rel="shortcut icon">
+</head>
+<body>
+<main>
+  <p>SEND E-MAIL</p>
+<form action="" class="contact-form" method="post">
+    <input type="text" placeholder="Your Email" name="username" value="{{request.form.username}}"><br>
+    <input type="password" placeholder="Password" name="password" value="{{request.form.password}}"><br>
+    <input type="text" placeholder="To..." name="email" value="{{request.form.email}}"><br>
+    <input type="text" placeholder="Subject" name="subject" value="{{request.form.subject}}"><br>
+    <textarea type="text" placeholder="Matter..." name="body" value="{{request.form.body}}"></textarea><br>
+    <button placeholder="Submit" name="submit" >Log In</button>
+</form>
+</main>
+</body>
+</html>
